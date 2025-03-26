@@ -1,11 +1,12 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("kotlin-parcelize")
 }
 
 android {
     namespace = "org.lostandfoundapp.tamiulostnfound"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "org.lostandfoundapp.tamiulostnfound"
@@ -49,6 +50,8 @@ android {
     }
 }
 
+val ktor_version: String by project
+
 dependencies {
 
     implementation(libs.androidx.core.ktx)
@@ -67,4 +70,11 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    // I added these
+    implementation("androidx.startup:startup-runtime:1.1.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
+    implementation("io.ktor:ktor-client-core:$ktor_version")
+    implementation("io.ktor:ktor-client-cio:$ktor_version")
+
 }
