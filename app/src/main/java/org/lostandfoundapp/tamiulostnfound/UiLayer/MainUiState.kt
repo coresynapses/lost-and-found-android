@@ -1,4 +1,4 @@
-package org.lostandfoundapp.tamiulostnfound.UILayer
+package org.lostandfoundapp.tamiulostnfound.UiLayer
 
 import org.lostandfoundapp.tamiulostnfound.DataLayer.Item
 

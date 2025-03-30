@@ -1,4 +1,4 @@
-package org.lostandfoundapp.tamiulostnfound.UILayer
+package org.lostandfoundapp.tamiulostnfound.UiLayer
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
