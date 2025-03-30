@@ -1,6 +1,5 @@
 package org.lostandfoundapp.tamiulostnfound.UiLayer
 
-import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -8,13 +7,8 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonColors
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -25,26 +19,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import org.lostandfoundapp.tamiulostnfound.DataLayer.Item
-import org.lostandfoundapp.tamiulostnfound.R
 
 @Composable
-fun ItemsList(items: List<Item>) {
-    Surface(
-        modifier = Modifier.padding(top = 75.dp)
-            .size(height = 300.dp, width = 200.dp)
-    ) {
-        Text("hehe")
-    }
-    LazyColumn {
-        items(items) { item ->
-            ItemEntry(item = item)
-        }
-
-    }
-}
-
-@Composable
-fun ItemEntry(item: Item) {
+fun ItemEntry(
+    item: Item,
+    onNavigateToClaimScreen: () -> Unit,
+    onNavigateToReportScreen: () -> Unit
+) {
     val status: String
     val lnfStatus: Color
     val reportedOrClaimed: String
@@ -152,9 +133,7 @@ fun ItemEntry(item: Item) {
             }
 
             Button(
-                onClick = {
-                    Log.d("Button", "Clicked")
-                },
+                onClick = if (item.dateClaimed == null) onNavigateToClaimScreen else onNavigateToReportScreen,
                 modifier = Modifier.padding(end = 24.dp),
                 colors = buttonColors
             ) {
