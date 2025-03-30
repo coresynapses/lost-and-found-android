@@ -1,4 +1,4 @@
-package org.lostandfoundapp.tamiulostnfound.UiLayer
+package org.lostandfoundapp.tamiulostnfound.uilayer
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row

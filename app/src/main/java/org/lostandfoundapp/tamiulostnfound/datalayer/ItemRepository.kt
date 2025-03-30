@@ -1,4 +1,4 @@
-package org.lostandfoundapp.tamiulostnfound.DataLayer
+package org.lostandfoundapp.tamiulostnfound.datalayer
 
 import android.content.Context
 import org.lostandfoundapp.tamiulostnfound.R

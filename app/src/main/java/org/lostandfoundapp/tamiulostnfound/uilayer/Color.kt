@@ -1,4 +1,4 @@
-package org.lostandfoundapp.tamiulostnfound.UiLayer
+package org.lostandfoundapp.tamiulostnfound.uilayer
 
 import androidx.compose.ui.graphics.Color
 

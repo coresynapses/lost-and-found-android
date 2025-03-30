@@ -1,4 +1,4 @@
-package org.lostandfoundapp.tamiulostnfound.UiLayer
+package org.lostandfoundapp.tamiulostnfound.uilayer
 
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -15,7 +15,7 @@ fun MainScreen() {
 
     NavHost(
         navController = navController,
-        startDestination = "add"
+        startDestination = "main"
     ) {
         composable("main") {
             GeneralScaffold(

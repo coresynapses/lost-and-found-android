@@ -1,4 +1,4 @@
-package org.lostandfoundapp.tamiulostnfound.UiLayer
+package org.lostandfoundapp.tamiulostnfound.uilayer
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -18,7 +18,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
-import org.lostandfoundapp.tamiulostnfound.DataLayer.Item
+import org.lostandfoundapp.tamiulostnfound.datalayer.Item
 
 @Composable
 fun ItemEntry(

@@ -1,4 +1,4 @@
-package org.lostandfoundapp.tamiulostnfound.UiLayer
+package org.lostandfoundapp.tamiulostnfound.uilayer
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

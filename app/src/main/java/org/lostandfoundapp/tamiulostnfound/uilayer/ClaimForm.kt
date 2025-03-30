@@ -1,29 +1,36 @@
-package org.lostandfoundapp.tamiulostnfound.UiLayer
+package org.lostandfoundapp.tamiulostnfound.uilayer
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.navigation.NavController
 
 @Composable
-fun ReportForm(
+fun ClaimForm(
     navController: NavController
 ) {
     Column {
-        Text("Report Form")
-        Row {
-            Text("Name:")
-            Text("Something")
+        Row (
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text("Email:")
+            TextField(
+                value = "Enter email here...",
+                onValueChange = {},
+            )
         }
-        Row {
-            Text("Location:")
-            Text("Somewhere")
-        }
-        Row {
-            Text("Time found:")
-            Text("Sometime")
+        Row (
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text("Phone Number:")
+            TextField(
+                value = "Enter phone number here...",
+                onValueChange = {},
+            )
         }
         Row {
             Button(onClick = {

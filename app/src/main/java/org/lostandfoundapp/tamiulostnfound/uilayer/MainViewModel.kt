@@ -1,10 +1,10 @@
-package org.lostandfoundapp.tamiulostnfound.UiLayer
+package org.lostandfoundapp.tamiulostnfound.uilayer
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
-import org.lostandfoundapp.tamiulostnfound.DataLayer.Item
+import org.lostandfoundapp.tamiulostnfound.datalayer.Item
 
 
 class LNFViewModel : ViewModel() {

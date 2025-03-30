@@ -1,4 +1,4 @@
-package org.lostandfoundapp.tamiulostnfound.DataLayer
+package org.lostandfoundapp.tamiulostnfound.datalayer
 
 import androidx.annotation.DrawableRes
 

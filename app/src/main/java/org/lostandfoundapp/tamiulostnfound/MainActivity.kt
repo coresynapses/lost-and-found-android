@@ -5,9 +5,9 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import org.lostandfoundapp.tamiulostnfound.DataLayer.ItemsRepository
-import org.lostandfoundapp.tamiulostnfound.UiLayer.MainScreen
-import org.lostandfoundapp.tamiulostnfound.UiLayer.TAMIULostNFoundTheme
+import org.lostandfoundapp.tamiulostnfound.datalayer.ItemsRepository
+import org.lostandfoundapp.tamiulostnfound.uilayer.MainScreen
+import org.lostandfoundapp.tamiulostnfound.uilayer.TAMIULostNFoundTheme
 
 val itemRepo: ItemsRepository = ItemsRepository()
 
