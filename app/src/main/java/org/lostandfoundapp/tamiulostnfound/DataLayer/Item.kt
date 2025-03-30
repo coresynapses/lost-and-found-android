@@ -2,9 +2,9 @@ package org.lostandfoundapp.tamiulostnfound.DataLayer
 
 import java.util.Date
 
-open class Item(
+class Item(
+    val dateReported: String = "",
+    val dateClaimed: String? = null,
     val name: String = "Item Name",
-    val dateReported: Date = Date(),
-    val dateClaimed: Date? = null,
     val category: Int = 1,
 )

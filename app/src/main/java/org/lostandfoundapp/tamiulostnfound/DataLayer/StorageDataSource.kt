@@ -2,20 +2,32 @@ package org.lostandfoundapp.tamiulostnfound.DataLayer
 
 import androidx.room.Room
 import android.content.Context
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+
 
 data class StorageDataSource(
-    var itemsList: ArrayList<Item> = ArrayList<Item>(),
+    var itemsList: List<ItemEntity> = ArrayList<ItemEntity>(),
     var db: ItemDatabase? = null,
 ) {
     fun setupDatabase(ctx: Context) {
-//        db = Room.databaseBuilder(ctx, ItemDatabase::class.java, "items-db").build()
+        CoroutineScope(Dispatchers.IO).launch {
+            db = Room.databaseBuilder(ctx.applicationContext, ItemDatabase::class.java, "items-db")
+                .build()
+        }
     }
 
-    fun addItem() {
-        itemsList.add(Item())
+    fun addItem(item: Item) {
+        CoroutineScope(Dispatchers.IO).launch {
+            db!!.itemDao().addItem(ItemEntity(item))
+        }
     }
 
-    fun getItems() : ArrayList<Item> {
+    fun getItems() : List<ItemEntity> {
+        CoroutineScope(Dispatchers.IO).launch {
+            itemsList = db!!.itemDao().getAllItems()
+        }
         return itemsList
     }
 }

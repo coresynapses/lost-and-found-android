@@ -40,11 +40,11 @@ class NetworkDataSource(
              }
          }
 
-          runBlocking {
-               val body = ktorClient!!.get("http://10.0.2.2:8080/android/")
-               Log.d("", "Response: ${body.bodyAsText()}")
-               items = body.body()
-          }
+//          runBlocking {
+//               val body = ktorClient!!.get("http://10.0.2.2:8080/android/")
+//               Log.d("", "Response: ${body.bodyAsText()}")
+//               items = body.body()
+//          }
 
 
           return null

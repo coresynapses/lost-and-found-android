@@ -4,7 +4,7 @@ plugins {
     id("kotlin-parcelize")
 
     // I added this
-//    id("com.google.devtools.ksp")
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -77,7 +77,7 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     // I added these
-//    implementation("ch.qos.logback:logback-classic:$logback_version")
+    // implementation("ch.qos.logback:logback-classic:$logback_version")
     implementation("androidx.startup:startup-runtime:1.1.1")
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
@@ -88,7 +88,5 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
 
     implementation("androidx.room:room-runtime:$room_version")
-//    ksp("androidx.room:room-compiler:$room_version")
-//    implementation("androidx.room:room-ktx:$room_version")
-
+    ksp("androidx.room:room-compiler:$room_version")
 }
