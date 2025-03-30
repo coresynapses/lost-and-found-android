@@ -6,9 +6,9 @@ import androidx.room.Query
 
 @Dao
 interface ItemDAO {
-    @Query("Select * from items")
-    fun getAllItems(): List<Item>
+    @Query("SELECT * FROM itementity")
+    fun getAllItems(): List<ItemEntity>
 
-    @Insert()
-    fun addItem()
+    @Insert
+    fun addItem(item: ItemEntity)
 }

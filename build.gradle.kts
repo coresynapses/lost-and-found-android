@@ -4,5 +4,5 @@ plugins {
     alias(libs.plugins.kotlin.android) apply false
 
     // I added this
-//    id("com.google.devtools.ksp") version "2.0.21" apply false
+    id("com.google.devtools.ksp") version "1.9.20-1.0.14" apply false
 }
