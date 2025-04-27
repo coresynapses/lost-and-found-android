@@ -6,10 +6,10 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import org.lostandfoundapp.tamiulostnfound.datalayer.ItemsRepository
+import org.lostandfoundapp.tamiulostnfound.datalayer.itemRepo
 import org.lostandfoundapp.tamiulostnfound.uilayer.MainScreen
 import org.lostandfoundapp.tamiulostnfound.uilayer.TAMIULostNFoundTheme
 
-val itemRepo: ItemsRepository = ItemsRepository()
 
 class MainActivity : ComponentActivity() {
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -17,6 +17,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         enableEdgeToEdge()
+
+        itemRepo.setup(null)
 
         setContent {
             TAMIULostNFoundTheme {

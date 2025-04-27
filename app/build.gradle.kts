@@ -56,6 +56,7 @@ android {
 val ktor_version: String by project
 val room_version: String by project
 val logback_version: String by project
+val camerax_version: String by project
 
 dependencies {
 
@@ -68,6 +69,7 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation(libs.androidx.room.coroutines)
+    implementation(libs.androidx.media3.common.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -90,4 +92,11 @@ dependencies {
 
     implementation("androidx.room:room-runtime:$room_version")
     ksp("androidx.room:room-compiler:$room_version")
+
+    implementation("androidx.camera:camera-camera2:$camerax_version")
+    implementation("androidx.camera:camera-lifecycle:$camerax_version")
+    implementation("androidx.camera:camera-video:$camerax_version")
+    implementation("androidx.camera:camera-view:$camerax_version")
+
+    implementation("com.google.code.gson:gson:2.10.1")
 }

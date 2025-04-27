@@ -6,7 +6,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import org.lostandfoundapp.tamiulostnfound.itemRepo
+import org.lostandfoundapp.tamiulostnfound.datalayer.itemRepo
 
 @Composable
 fun MainScreen() {
@@ -24,8 +24,14 @@ fun MainScreen() {
                         items(itemRepo.getItems()) { item ->
                             ItemEntry(
                                 item = item,
-                                onNavigateToClaimScreen = { navController.navigate("claim") },
-                                onNavigateToReportScreen = { navController.navigate("report") },
+                                onNavigateToClaimScreen = {
+                                    itemRepo.activeItem = item
+                                    navController.navigate("claim")
+                                                          },
+                                onNavigateToReportScreen = {
+                                    itemRepo.activeItem = item
+                                    navController.navigate("report")
+                                                           },
                             )
                         }
                     }
@@ -55,13 +61,8 @@ fun MainScreen() {
                 title = "Report Fraudulent Claim")
         }
 
-        composable("search") {
-
-        }
-
-        composable("filter") {
-
-        }
+//        composable("search") {}
+//        composable("filter") {}
     }
 
 

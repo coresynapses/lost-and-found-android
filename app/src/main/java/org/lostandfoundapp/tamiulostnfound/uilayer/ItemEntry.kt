@@ -30,7 +30,6 @@ fun ItemEntry(
     val lnfStatus: Color
     val reportedOrClaimed: String
     val date: String
-    val categoryString: String
     val actionButtonText: String
     val buttonColors: ButtonColors
 
@@ -46,11 +45,12 @@ fun ItemEntry(
             disabledContentColor = Color.Red,
             disabledContainerColor = Color.Gray
         )
-    } else {
+    }
+    else {
         status = "Found"
         lnfStatus = Color.Green
         reportedOrClaimed = "Date Claimed:"
-        date = item.dateClaimed
+        date = item.dateClaimed.toString()
         actionButtonText = "Report"
         buttonColors = ButtonColors(
             containerColor = Color.Blue,
@@ -60,7 +60,7 @@ fun ItemEntry(
         )
     }
 
-    categoryString = when(item.category) {
+    val categoryString: String = when(item.category) {
         1 -> "Apparel"
         2 -> "Apparel"
         3 -> "Finance"
